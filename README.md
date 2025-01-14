@@ -209,7 +209,7 @@ SSR은 다음과 같은 장점을 가지고 있다.
 
 ## State
 <details>
-<summary><strong>`tanstack-query`에서 `stale time`과 `gc time`의 차이점은?</strong></summary>
+<summary><strong>tanstack-query에서 stale time과 gc time의 차이점은?</strong></summary>
 
 `tanstack-query`에서 `staleTime`과 `gcTime`은 데이터를 캐싱하고 관리하는 데 중요한 두 가지 설정 값이다. 
 
