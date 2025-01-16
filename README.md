@@ -281,6 +281,62 @@ staleTime은 데이터를 처음 가져온 후에 그 데이터를 신선한 상
 
 </details>
 
+## Typescript
+
+<details>
+<summary><strong>타입스크립트의 타입과 인터페이스의 차이점은?</strong></summary>
+
+
+`interface`는 객체의 형태를 확장하는 데 용이한 반면, `type`은 튜플, 인터섹션, 유니온 등을 이용하여 더 복잡한 타입 정의 및 조합을 표현하는 데 용이하다.
+
+`interface`는 선언 병합을 지원해 여러 번 선언할 수 있어 주로 객체 타입을 확장할 때 유리하다. 동일한 이름을 가진 `interface`를 여러 번 선언하면, 이 속성들이 자동으로 합쳐진다.
+
+```
+interface Person {
+  age: number;
+  name: string;
+  isBirthday: boolean;
+}
+
+interface Person {
+  address: string;
+}
+
+const person1: Person = {
+  age: 1,
+  name: "abcd",
+  isBirthday: false,
+  address: "1010",
+};
+```
+
+`type`으로 선언한 경우에는 동일한 이름을 중복 선언하면 에러가 발생한다. 대신 `type`은 튜플과 같은 복잡한 타입 표현이 가능하며, 복잡한 타입 조합을 위해 인터섹션과 유니온 연산자를 지원한다.
+
+```
+type BasicInfo = {
+  name: string;
+  age: number;
+};
+
+type ContactInfo = {
+  email: string;
+  phone: string;
+};
+
+// 인터섹션 타입 (&)을 사용해 두 타입을 결합하여 하나의 타입으로 생성
+type PersonInfo = BasicInfo & ContactInfo;
+
+const person2: PersonInfo = {
+  name: "John",
+  age: 30,
+  email: "john@example.com",
+  phone: "123-456-7890",
+};
+```
+
+`interface`는 선언 병합을 통해 여러 번 선언이 가능하여 주로 객체의 타입을 확장하는 데 유리하며, `type`은 튜플 등 복잡한 타입을 사용하고 유연한 연산자를 통해 복잡한 타입 조합을 표현하는 데 적합하다.
+</details>
+
 ## Test
 
 <details><summary><strong>E2E 테스트란?</strong></summary>
