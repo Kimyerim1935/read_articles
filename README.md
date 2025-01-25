@@ -415,7 +415,20 @@ Promise는 코드의 가독성을 높이고, 비동기 작업의 흐름을 제�
 
 
 </details>
+<details>
+<summary><strong>리액트의 strict mode란?</strong></summary>
 
+리액트의 strict mode는 주로 개발 중에 발생할 수 있는 잠재적인 문제를 사전에 감지하고 예방하기 위해 사용된다. 
+
+몇 가지의 주요 목적이 있다.
+
+1. 오래된 라이프 사이클 메서드와 비권장 API 사용을 감지
+: componentWillMount, componentWillReceiveProps와 같은 메서드들은 더이상 사용이 권장되지 않은데, 해당 메서드들이 코드에 포함된 경우 경고를 표시해준다.
+
+2. 의도치 않은 부수 효과 방지
+: 컴포너트의 렌더링이 예측 가능하고 순수하게 이루어지기를 기대한다. 
+
+</details>
 ## State
 <details>
 <summary><strong>tanstack-query에서 stale time과 gc time의 차이점은?</strong></summary>
