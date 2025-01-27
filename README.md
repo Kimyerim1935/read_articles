@@ -342,7 +342,21 @@ const multiply = function (a, b) {
 
 따라서 `setTimeout(callback, 0)`을 호출해도 현재 실행 중인 모든 동기 작업들이 완료된 후에야 그 콜백이 실행된다. 
 </details>
+<details>
+<summary><strong>Promise의 resolve와 fulfilled에 대하여</strong></summary>
 
+resolve는 Promise를 완료시키는 함수이고, fulfilled는 해당 Promise가 완료된 상태를 뜻한다.
+
+resolve는 Promise가 성공적으로 끝났을 때 결과 값을 넘겨주는 함수이다.
+
+어떤 비동기 작업이 잘 끝났을 때, resolve를 호출해서 '이 작업이 끝났고 결과는 이렇게 나왔다' 라고 전달하게 된다. 이렇게 resolve가 호출되면, Promise의 상태는
+fulfilled로 바뀌게 된다.
+
+resolve는 Promise를 성공적으로 마무리 짓는 행위라고 볼 수 있고, fulfilled는 그 결과로 발생하는 완료된 상태를 의미한다.
+
+만약 비동기 작업에 오류나 실패가 발생하면 reject가 호출되어 reject 상태가 된다. 
+then은 resolve 된 값을 처리하고 catch는 reject된 오류를 처리하는 식으로 Promise의 결과를 다루게 된다.
+</details>
 <h2>React</h2>
 
 <details>
