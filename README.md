@@ -357,6 +357,19 @@ resolve는 Promise를 성공적으로 마무리 짓는 행위라고 볼 수 있�
 만약 비동기 작업에 오류나 실패가 발생하면 reject가 호출되어 reject 상태가 된다. 
 then은 resolve 된 값을 처리하고 catch는 reject된 오류를 처리하는 식으로 Promise의 결과를 다루게 된다.
 </details>
+
+<details>
+<summary><strong>인터넷 창에 www.google.com을 입력하면 일어나는 일은?</strong></summary>
+
+1. DNS 조회: 사용자가 www.google.com을 입력하면 브라우저는 도메인 주소를 IP 주소로 변환(DNS 조회)한다. 브라우저는 캐시된 DNS 기록을 먼저 확인하고, 없으면 로컬 DNS 서버에 요청하여 해당 IP 주소를 얻는다. 
+2. TCP 연결 수립: IP 주소가 확인되면, 브라우저는 서버와 TCP 연결을 수립한다. TCP는 데이터를 신뢰성 있게 전달하기 위한 프로토콜이다. 이 과정에서 브라우저는 서버와 3-way-handshake를 수행한다.<br/>
+브라우저가 SYN 패킷을 보내고, 서버가 SYN-ACK 패킷을 보내며, 다시 브라우저가 ACK 패킷을 보내는 과정이다.
+3. HTTP 요청:  TCP 연결이 수립되면, 브라우저는 HTTP/HTTPS 요청을 보낸다. 만약 HTTPS 를 사용할 경우, SSL/TLS 핸드셰이트도 수행한다. 이 과정에서 브라우저와 서버가 암호화된 연결을 설정하기 위한 보안 인증서를 교환하고, 암호화 키를 협상한다.
+4. 서버의 응답: 서버는 요청을 받고 해당 리소스(HTML, CSS, Javascript)를 브라우저에게 응답으로 보낸다.
+5. 브라우저 렌더링: 받은 리소스를 바탕으로 브라우저 렌더링 파이프라인을 진행한다. DOM과 CSSOM을 생성하고, 렌더 트리를 구성한 뒤, 레이아웃과 페인트 단계를 통해 웹 페이지가 화면에 표시된다.
+
+</details>
+
 <h2>React</h2>
 
 <details>
