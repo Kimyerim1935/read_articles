@@ -633,6 +633,19 @@ Suspense의 단점은 무엇일까?
 또한 Suspense는 Promise 기반의 비동기 작업만 지원하기 때문에 fetch 요청에 바로 적용할 수 있는 것이 아니라, 이를 위해 추가적인 라이브러리를 사용하거나 Suspense와 호환되는 형태로 Promise를 관리해야 한다.
 
 </details>
+<details>
+<summary><strong>리액트의 render phase와 commit phase에 대해서 설명하시오</strong></summary>
+
+render phase는 리액트가 변화된 상태나 props에 따라 어떤 UI가 변경되어야 할지를 결정하는 단계이다. 이 과정에서는 실제로 DOM을 업데이트 하지 않고, 변경사항을 가상 DOM에서 계산하여 비교한다. 이 단계는 순수하게 계산하는 과정이기 때문에 성능에 영향을 주지 않도록 중단되거나 다시 실행될 수 있으며, Concurrent Mode를 통해 비동기적으로 처리될 수도 있다.
+
+commit phase는 실제로 변환된 UI를 DOM에 반영하는 단계이다. 가상 DOM에서 계산된 결과를 실제 DOM에 적용하고, 변화된 UI를 브라우저에 렌더링한다. DOM 업데이트 이후에는 useEffect와 같은 사이드 이펙트를 발생시키는 훅들이 실행된다.
+
+render phase와 commit phase가 동기화될 때의 특징은?
+
+1. 단계적 진행: render phase가 완료되면 리액트는 commit phase를 실행하지 않고, 다른 높은 우선순위 작업이 있다면 먼저 처리한 후 나중에 commit phase를 실행할 수 있다. React는 동기화가 필요한 작업을 효율적으로 관리하여 사용자 경험을 개선한다.
+2. 병목 관리: render phase에서 모든 변경 사항이 Fiber Tree에 준비된 상태에서 commit phase로 넘어가므로, Render와 commit단계의 일관성이 유지된다. 이 두 단계는 순차적으로 작동하여 UI가 정확하게 동기화되고 불필요한 재렌더링을 방지한다.
+
+</details>
 
 ## State
 <details>
