@@ -523,6 +523,55 @@ defer 속성에는 다음과 같은 특징들이 존재한다.
 
 </details>
 
+<details>
+<summary><strong>자바스크립트 함수에 대한 정리</strong></summary>
+
+자바스크립트 함수에는 여러가지 특징들이 있다.
+
+1. 자바스크립트 함수는 일급 객체이다.
+
+자바스크립트에서 함수는 값처럼 취급될 수 있으며 변수에 할당하거나, 다른 함수의 인자로 전달하거나 함수의 반환값으로 사용할 수 있다.
+
+```js
+const sayHello = function() { return 'Hello'; };
+console.log(sayHello()); // 'Hello'
+
+const executeFunction = function(fn) {
+  return fn();
+};
+console.log(executeFunction(sayHello)); // 'Hello'
+```
+
+2. 익명 함수와 코드 표현식
+
+자바스크립트에서는 이름 없는 함수(익명함수)를 정의할 수 있다. 익명 함수는 함수 표현식에서 주로 사용되며, 필요에따라 함수에 이름을 지정하지 않아도 된다.
+
+```js
+const add = function(a, b) {
+  return a + b;
+};
+console.log(add(2, 3)); // 5
+```
+
+3. 호이스팅
+
+함수 선언식을 통해 선언한 함수는 코드가 실행되기 전에 호이스팅 되어, 함수 선언 이전에 호출할 수 있다. 하지만 함수 표현식은 변수에 할당된 후에 사용할 수 있다.
+
+```js
+console.log(declaredFunction()); // 'Declared Function'
+function declaredFunction() {
+  return 'Declared Function';
+}
+
+// 함수 표현식은 할당 후에만 사용할 수 있음
+const expressedFunction = function() {
+  return 'Expressed Function';
+};
+console.log(expressedFunction()); // 'Expressed Function'
+```
+
+</details>
+
 ## React
 
 <details>
