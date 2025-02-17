@@ -435,6 +435,17 @@ sessionStorage에 데이터를 저장할 경우에도 보안적인 문제는 여
 인증 토큰이나 사용자 비밀번호는 HTTP-Only 쿠키를 사용해야한다. 이렇게 하면 자바스크립트에서 접근할 수 없으므로 XSS 공격에 대한 위험을 줄일 수 있다.
 </details>
 
+<details>
+<summary><strong>네트워크 통신에서 Body와 Header의 차이는 무엇일까?</strong><summary>
+
+Header는 데이터의 메타 정보를 담는다. 데이터 자체가 아니라 데이터에 대한 컨텍스트 정보를 포함한다. 이로서 수신자가 데이터를 어떻게 처리해야 할지 지침을 제공하는 역할을 한다.
+HTTP 요청이나 응답에서 Header에는 Content-Type, Authorization, Cache-Control과 같은 정보가 포함된다. 정보의 유형, 인증 정보, 캐시 설정 등 컨텍스트 정보를 전달한다.
+
+Body는 전송하려는 실제 데이터를 의미하며 HTTP 요청에서 서버로 전달하는 JSON 데이터나 폼 데이터가 이에 해당된다. 일반적으로 헤더에 비해 복잡하고 용량이 큰 데이터를 포함한다.
+
+Header는 네트워크 통신에서 안내 역할을 하고 Body는 본질적인 데이터를 전달하는 역할을 맡고 있음.
+</details>
+
 <h2>Network</h2>
 
 <details>
@@ -568,6 +579,53 @@ const expressedFunction = function() {
   return 'Expressed Function';
 };
 console.log(expressedFunction()); // 'Expressed Function'
+```
+
+4. 클로저
+
+자바스크립트 함수로 클로저를 구현할 수 있다. 클로저는 함수가 자신이 선언된 환경을 기억하고, 해당 환경에 접근할 수 있는 기능이다. 이를 통해 함수는 자신이 선언된 당시 스코프 내의 변수를 참조할 수 있다.
+
+```js
+function outer() {
+  const outerVar = 'I am outer!';
+  
+  return function inner() {
+    return outerVar; // 외부 변수에 접근 가능
+  };
+}
+const innerFunction = outer();
+console.log(innerFunction()); // 'I am outer!'
+```
+
+5. 고차함수
+
+자바스크립트에서는 함수가 일급 객체이기 때문에, 고차 함수(다른 함수를 인자로 받거나 반환하는 함수)를 정의할 수 있으며, 이는 함수형 프로그래밍 패턴을 가능하게 한다.
+
+```js
+function multiplyBy(factor) {
+  return function(num) {
+    return num * factor;
+  };
+}
+const double = multiplyBy(2);
+console.log(double(5)); // 10
+```
+
+6. 화살표 함수
+
+화살표 하수는 더 간결한 문법을 제공하고, this 바인딩에서 기존 함수와 다른 동작을 한다. 화살표 함수는 선언된 위치의 this 값을 유지하므로, 일반 함수와 달리 별도로 this를 바인딩할 필요가 없다.
+
+```js
+const obj = {
+  value: 42,
+  method: function() {
+    setTimeout(() => {
+      console.log(this.value); // 42 (Arrow 함수는 obj의 this를 유지)
+    }, 1000);
+  }
+};
+obj.method();
+
 ```
 
 </details>
