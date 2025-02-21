@@ -644,6 +644,35 @@ Private는 멤버 앞에 `#`키워드를 붙여 적용하는 접근제어자로,
 접근제어자를 활용하면 코드의 캡슐화를 통해 데이터 보호와 유지보수를 향상시킬 수 있다.
 </details>
 
+<details>
+<summary><strong>HTML 데이터 속성이란?</strong></summary>
+
+데이터 속성은 사용자 정의 데이터를 HTML 요소에 저장하기 위해 사용되는 속성으로, 선언 방법은 `data-`로 시작하는 속성을 HTML 태그에 추가하면 된다.
+
+```js
+// 사용예시
+<div data-user-id="12345" data-role="admin"></div>
+```
+
+자바스크립트를 통해 데이터 속성에 접근하려면 dataset 객체를 활용해야한다. HTML 데이터 속성 이름은 JS의 camelCase 형식으로 매핑된다.
+
+`요소.dataset.userId`를 호출하면 "12345" 라는 값이 반환된다.
+
+CSS에서도 데이터 속성을 활용할 수 있다.
+```CSS
+/* attr() 함수를 사용하여 접근 */
+article::before {
+  content: attr(data-parent);
+}
+
+/* 속성 선택자를 사용하여 접근 */
+article[data-columns="3"] {
+  width: 400px;
+}
+```
+
+</details>
+
 ## React
 
 <details>
