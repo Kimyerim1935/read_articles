@@ -446,7 +446,7 @@ Body는 전송하려는 실제 데이터를 의미하며 HTTP 요청에서 서�
 Header는 네트워크 통신에서 안내 역할을 하고 Body는 본질적인 데이터를 전달하는 역할을 맡고 있음.
 </details>
 
-<h2>Network</h2>
+## Network
 
 <details>
 <summary><strong>CORS는 무엇이며 왜 필요할까?</strong><summary>
@@ -670,6 +670,20 @@ article[data-columns="3"] {
   width: 400px;
 }
 ```
+
+</details>
+
+<details>
+<summary><strong>URI, URL, URN의 차이는?</strong></summary>
+
+URI(Uniform Resource Identifier)는 인터넷에서 자원을 식별하기 위한 문자열로, URI는 URI와 URN을 포함하는 상위 개념이다.
+특정 자원을 식별하기 위한 포괄적인 방법을 제공하며, 자원의 위치나 이름을 나타낼 수 있다.
+
+URL(Uniform Resource Locator)은 URI의 한 형태로, 인터넷 상에서 자원의 위치를 타나내는 방식이다. 자원이 어디에 위치해있는지 설명하는데 사용되며, 자원의 접근하기 위한 프로토콜을 포함한다.<br/>
+웹 페이지의 URL은 해당 페이지가 위치한 서버의 주소와 접근 방법을 포함한다.
+
+URN(Uniform Resource Name)은 URI의 또 다른 형태로, 자원의 위치와 상관없이 자원의 이름을 식별하는 방식이다. 자원의 위치가 변하더라도 동일한 식별자를 유지할 수 있게 한다.<br/>
+특정 스키마를 따르며, 자원에 대한 영구적인 식별자를 제공한다.
 
 </details>
 
