@@ -446,6 +446,18 @@ Body는 전송하려는 실제 데이터를 의미하며 HTTP 요청에서 서�
 Header는 네트워크 통신에서 안내 역할을 하고 Body는 본질적인 데이터를 전달하는 역할을 맡고 있음.
 </details>
 
+<details>
+<summary><strong>event.target과 event.currentTarget의 차이점은?</strong><summary>
+
+모두 이벤트 객체의 속성이며, 각각 이벤트가 실제로 발생한 요소와 이벤트 리스너가 연결된 요소를 가리킨다.
+
+이벤트는 특정 요소에서 발생한 후 부모 요소들로 전파되는 과정을 거치는데, 이 과정에서 target과 currentTarge이 다르게 동작한다.
+
+target은 사용자가 직접 상호작용한(이벤트가 발생한) 요소를, currentTarget은 그 이벤트를 듣고 있는 요소를 나타낸다.
+
+이 차이는 이벤트 위임이나 이벤트 전파 처리 시에 중요하다.
+</details>
+
 ## Network
 
 <details>
