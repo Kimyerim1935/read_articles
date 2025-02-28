@@ -471,6 +471,12 @@ Doctype을 선언하지 않으면 브라우저는 문서를 쿼크모드로 렌�
 따라서 정확하고 일관된 렌더링을 위해 Doctype 선언은 필수적이다.
 </details>
 
+<details>
+Node는 DOM을 구성하는 가장 기본적인 구성 단위이며, Node에는 여러 가지 타입이 존재한다. Document Node는 HTML 문서 전체를 나타내는 루트 노드이며, Element Node는 HTML 태그를 나타내고, Text Node는 텍스트 내용을, Comment Node는 주석을 나타낸다.
+
+모든 Element는 Node지만, 모든 Node가 Element인 것은 아니다. Element는 Id, class, style과 같은 HTML 속성을 가질 수 있으며, query Selector나 getElementsByClassName과 같은 메서드를 사용할 수 있다는 특징이 있다.
+</details>
+
 ## Network
 
 <details>
