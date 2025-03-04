@@ -477,6 +477,14 @@ Node는 DOM을 구성하는 가장 기본적인 구성 단위이며, Node에는 
 모든 Element는 Node지만, 모든 Node가 Element인 것은 아니다. Element는 Id, class, style과 같은 HTML 속성을 가질 수 있으며, query Selector나 getElementsByClassName과 같은 메서드를 사용할 수 있다는 특징이 있다.
 </details>
 
+<details>
+<summary><strong>HTML Doctype이란?</strong><summary>
+
+함수형 프로그래밍은 객체지향 패러다임과 마찬가지로 하나의 프로그래밍 패러다임이다. 객체지향 프로그래밍은 움직이는 부분을 캡슐화하여 코드의 이해를 도우며, 함수형 프로그래밍은 움직이는 부분을 최소화하여 코드 이해를 돕는다. 이 둘은 상충하는 개념이 아니며, 함께 조화되어 사용될 수 있다.
+
+함수를 합성하여 복잡한 프로그램을 쉽게 만들고, 부수 효과를 공통적인 방법으로 추상화하는 것이 함수형 프로그래밍의 핵심 개념이다.
+</details>
+
 ## Network
 
 <details>
