@@ -34,7 +34,7 @@ throttle은 일정 시간 간격 동안 발생한 이벤트 중 첫 번째 또�
 
 클로저는 자바스크립트의 함수가 일급 객체라는 특성과 렉시컬 스코프의 조합으로 만들어진다. 
 
-```
+```js
 function outerFunction(outerVariable) {
   return function innerFunction(innerVariable) {
     console.log('Outer Variable: ' + outerVariable);
@@ -54,7 +54,7 @@ newFunction('inside');
 1. 외부에서 접근할 수 없는 비공개 변수와 함수를 만들 수 있으므로 데이터를 은닉하여 외부 접근을 막고 무결성을 유지할 수 있다.
 2. 비동기 작업에서 이전의 실행 컨텍스트를 유지해야 할 때 유용하다. 콜백 함수가 비동기적으로 실행될 때, 클로저를 사용하면 함수 실행 시점의 변수를 참조할 수 있다.
 
-```
+```js
 function createLogger(name) {
   return function() {
     console.log(`Logger: ${name}`);
@@ -1222,7 +1222,7 @@ E2E테스트는 애풀리케이션의 중요한 사용자 흐름을 점검하여
 두 테스트를 함께 활용하면 애플리케이션의 안정성과 신뢰성을 극대화 할 수 있다.
 </details>
 
-## Backend
+# Backend
 
 <details>
 <summary><strong>시스템콜이란?</strong></summary>
@@ -1247,5 +1247,21 @@ E2E테스트는 애풀리케이션의 중요한 사용자 흐름을 점검하여
 또한 대칭키 암호화 방식에서는 각 통신 참여자 쌍마다 다른 키가 필요할 수 있고, 통신 대상이 많아질수록 대칭키의 수가 많아지므로 키 관리가 복잡해질 수 있다.
 
 비대칭키 암호화에는 공개키와 개인키가 존재한다. 일반적으로 이 방식에서 송신자는 수신자의 공개키를 이용해 암호화를 수행하고, 암호화된 데이터는 수신자에게 전달된다. 
+
+</details>
+
+# ETC
+
+<details>
+<summary><strong>CI/CD란?</strong></summary>
+
+CI/CD는 애플리케이션 배포 과정을 자동화하여 더 짧은 주기로 고객에게 서비스를 제공하는 방식이다.
+
+CI는 Continuous Integration의 약어로 지속적 통합을 의미한다. CD는 Continuous Delivery 또는 Continuous Deployment를 의미한다.
+
+CI는 개발자들이 코드 변경사항을 주기적으로 메인 브랜치에 병합하는 과정을 자동화한 것이다. 코드 변경사항이 발생할 때마다 자동으로 빌드와 테스트를 수행하여 문제를 조기에 발견할 수 있다.
+CD는 CI 이후 단계를 자동화하는 것으러 애플리케이션의 변경사항을 production 환경으로 배포하는 과정을 자동화한 것이다. 
+
+Continuous Delivery는 배포 가능한 상태로 준비하는 과정까지는 자동화하고 실제 배포는 사람의 승인을 거쳐 수동으로 진행하는 반면, Continuous Deployment는 production환경에 배포하는 과정까지 모두 자동화한다.
 
 </details>
