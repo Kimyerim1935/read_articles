@@ -1015,6 +1015,17 @@ Streaming SSR은 서버에서 렌더링된 HTML을 한 번에 완성해서 보�
 이러한 특징과 장점을 통해 Streaming SSR은 기존 SSR의 한계를 극복하며 더욱 빠르고 효율적인 웹 페이지 렌더링을 가능하게 한다.
 </details>
 
+<details>
+<summary><strong>Next.js를 사용하는 이유는?</strong></summary>
+
+React를 이용해서 웹 애플리케이션을 구현하기 위해서는 번들러, 라우팅, 다양한 렌더링 방식을 위한 추가 세팅 등 복잡한 과정을 거쳐야한다.
+
+Next.js는 이러한 복잡한 과정을 생략하고 기본적으로 설정된 환경에서 편하게 웹 애플리케이션을 개발할 수 있도록 도와준다. 파일 기반 라우팅 시스템은 별도의 라우팅 설정 없이 디렉토리 구조만으로 페이지를 생성할 수 있게 해준다.
+이외에도 이미지 최적화, 코드 스플리팅, 데이터 캐싱 등 현대적인 웹 애플리케이션에 필수적인 기능들을 기본적으로 제공한다.
+
+</details>
+
+
 ## State
 <details>
 <summary><strong>tanstack-query에서 stale time과 gc time의 차이점은?</strong></summary>
